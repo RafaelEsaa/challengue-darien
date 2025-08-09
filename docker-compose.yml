@@ -1,0 +1,32 @@
+# version: "3.9"
+services:
+  mockoon-api:
+    image: mockoon/cli:latest
+    container_name: mockoon-api
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./mockoon/mockoon-data.json:/data.json
+    command: --data /data.json --port 3000
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: react-dev
+    ports:
+      - "5173:5173" # 5173:5173 para vite
+    volumes:
+      - ./src:/app/src
+      - ./public:/app/public
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: npm run dev -- --host 0.0.0.0
+    depends_on:
+      - mockoon-api
+    networks:
+      - devnet
+
+networks:
+  devnet:
+    driver: bridge

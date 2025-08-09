@@ -1,0 +1,199 @@
+{
+  "uuid": "355b950f-a6d5-4058-b878-5d3317462aab",
+  "lastMigration": 33,
+  "name": "Mockoon",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "cfcef771-3c6b-47bf-9c81-9f1d10b0eab4",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "reservas",
+      "responses": [
+        {
+          "uuid": "2f705c02-a751-46e4-b1ad-4e35746af2ca",
+          "body": "[\n  {\n    \"id\": 1,\n    \"date\": \"2025-08-10\",\n    \"time\": \"10:00\",\n    \"name\": \"Rafael Esaa\",\n    \"comment\": \"Reunión semanal\",\n    \"typeSpace\": \"vacuna\"\n  },\n  {\n    \"id\": 2,\n    \"date\": \"2025-08-11\",\n    \"time\": \"14:30\",\n    \"name\": \"Ana Torres\",\n    \"comment\": \"Presentación de proyecto\",\n    \"typeSpace\": \"laboratorio\"\n  },\n  {\n    \"id\": 3,\n    \"date\": \"2025-08-12\",\n    \"time\": \"09:00\",\n    \"name\": \"Luis Fernández\",\n    \"comment\": \"Taller de marketing\",\n    \"typeSpace\": \"vacuna\"\n  },\n  {\n    \"id\": 4,\n    \"date\": \"2025-08-13\",\n    \"time\": \"16:00\",\n    \"name\": \"Marta Rivas\",\n    \"comment\": \"Llamada con cliente\",\n    \"typeSpace\": \"laboratorio\"\n  },\n  {\n    \"id\": 5,\n    \"date\": \"2025-08-14\",\n    \"time\": \"11:00\",\n    \"name\": \"Carlos Ruiz\",\n    \"comment\": \"Planificación mensual\",\n    \"typeSpace\": \"vacuna\"\n  },\n  {\n    \"id\": 6,\n    \"date\": \"2025-08-15\",\n    \"time\": \"13:00\",\n    \"name\": \"Lucía Mendoza\",\n    \"comment\": \"Capacitación interna\",\n    \"typeSpace\": \"vacuna\"\n  },\n  {\n    \"id\": 7,\n    \"date\": \"2025-08-16\",\n    \"time\": \"08:00\",\n    \"name\": \"Pedro García\",\n    \"comment\": \"Desayuno ejecutivo\",\n    \"typeSpace\": \"consulta\"\n  },\n  {\n    \"id\": 8,\n    \"date\": \"2025-08-17\",\n    \"time\": \"15:30\",\n    \"name\": \"Valeria Soto\",\n    \"comment\": \"Charla invitada\",\n    \"typeSpace\": \"laboratorio\"\n  },\n  {\n    \"id\": 9,\n    \"date\": \"2025-08-18\",\n    \"time\": \"17:00\",\n    \"name\": \"Tomás Andrade\",\n    \"comment\": \"Evaluación de equipo\",\n    \"typeSpace\": \"laboratorio\"\n  },\n  {\n    \"id\": 10,\n    \"date\": \"2025-08-19\",\n    \"time\": \"12:00\",\n    \"name\": \"Isabela Noguera\",\n    \"comment\": \"Almuerzo informal\",\n    \"typeSpace\": \"consulta\"\n  }\n]\n",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "336f34e9-67c7-47e6-8474-512350701218",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "espacios",
+      "responses": [
+        {
+          "uuid": "24c64947-cbb6-4100-8b0b-7f343377b1d1",
+          "body": "[\n  { \n    \"id\": 1,\n    \"description\": \"Consulta médica\", \n    \"value\": \"consulta\"\n  },\n  { \n    \"id\": 2,\n    \"description\": \"Vacunación\", \n    \"value\": \"vacuna\" \n  },\n  { \n    \"id\": 3,\n    \"description\": \"Examen de laboratorio\", \n    \"value\": \"laboratorio\"\n  },\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "d84b424b-6a83-4537-8e31-c2c712ead86e",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "reservas",
+      "responses": [
+        {
+          "uuid": "beb99904-08ed-4416-890f-100bb7f369cd",
+          "body": "{\n  \"success\": true,\n  \"message\": \"Reserva agregada correctamente\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    },
+    {
+      "uuid": "0b592ed8-86fb-409e-a54d-9b9e9b4e92c0",
+      "type": "http",
+      "documentation": "",
+      "method": "delete",
+      "endpoint": "reservas/:id",
+      "responses": [
+        {
+          "uuid": "219f37b5-12f0-4087-911c-3b00cab2fe90",
+          "body": "{\n  \"success\": true,\n  \"message\": \"Reserva eliminada correctamente\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "cfcef771-3c6b-47bf-9c81-9f1d10b0eab4"
+    },
+    {
+      "type": "route",
+      "uuid": "336f34e9-67c7-47e6-8474-512350701218"
+    },
+    {
+      "type": "route",
+      "uuid": "d84b424b-6a83-4537-8e31-c2c712ead86e"
+    },
+    {
+      "type": "route",
+      "uuid": "0b592ed8-86fb-409e-a54d-9b9e9b4e92c0"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}
